@@ -1,0 +1,25 @@
+.home {
+    position: relative;
+    margin-top: 15%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1%;
+    float: right;
+    margin-right: 10%;
+}
+
+.informercial {
+  position: relative;
+  margin-top: 15%;
+  display: inline-block;
+  margin-left: 10%;
+}
+
+label {
+  display: block;
+}
+button {
+  display: block;
+  margin-top: 5px;
+}

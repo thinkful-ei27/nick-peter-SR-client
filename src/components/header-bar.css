@@ -1,0 +1,10 @@
+.header-bar{
+  text-align: center;
+  background-color: palegreen;
+  position: relative;
+  top: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 5px solid black;
+}
+

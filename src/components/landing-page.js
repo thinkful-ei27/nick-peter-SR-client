@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 
 import LoginForm from './login-form';
+import './landing-page.css';
 
 export function LandingPage(props) {
     // If we are logged in redirect straight to the user's dashboard
@@ -11,11 +12,22 @@ export function LandingPage(props) {
     }
 
     return (
+      <div role="container" className="homeContainer">
         <div className="home">
-            <h2>Welcome to Foo App</h2>
             <LoginForm />
+            <p>For New Users:</p>
             <Link to="/register">Register</Link>
+            <label>For Confused Users:</label>
+            <button>FAQ</button>
         </div>
+        <div role="container" className="informercial">
+          <h3>Learn Portuguese the RIGHT Way</h3>
+          <p>Portugueuse Palavras uses Spaced Reptition,</p>
+          <p>focusing on what you don't know and not wasting</p>
+          <p>time with what you do. Click on the Register link</p>
+          <p>to learn South America's Biggest Language today!</p>
+        </div>
+      </div>
     );
 }
 
