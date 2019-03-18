@@ -19,7 +19,7 @@
 label {
   display: block;
 }
-button {
+.faqButton {
   display: block;
   margin-top: 5px;
 }

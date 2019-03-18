@@ -18,7 +18,7 @@ export function LandingPage(props) {
             <p>For New Users:</p>
             <Link to="/register">Register</Link>
             <label>For Confused Users:</label>
-            <button>FAQ</button>
+            <button className="faqButton'">FAQ</button>
         </div>
         <div role="container" className="informercial">
           <h3>Learn Portuguese the RIGHT Way</h3>
