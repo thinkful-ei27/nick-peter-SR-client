@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
+import WordDisplay from './word-display';
 import {fetchProtectedData} from '../actions/protected-data';
 import {Link, Redirect} from 'react-router-dom';
 import './dashboard.css';
@@ -15,8 +16,8 @@ export class Dashboard extends React.Component {
                 <div className="dashboard-username">
                     <h2>Ola {this.props.username}!</h2>
                 </div>
-                <div className="dashboard-protected-data">
-                    Protected data: {this.props.protectedData}
+                <div>
+                    <WordDisplay />
                 </div>
             </div>
         );
