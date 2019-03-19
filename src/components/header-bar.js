@@ -15,7 +15,7 @@ export class HeaderBar extends React.Component {
         let logOutButton;
         if (this.props.loggedIn) {
             logOutButton = (
-                <button onClick={() => this.logOut()} class="logout-button">Log out</button>
+                <button onClick={() => this.logOut()} className="logout-button">Log out</button>
             );
         }
         return (
