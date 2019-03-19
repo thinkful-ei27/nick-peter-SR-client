@@ -20,7 +20,7 @@ export const wordsError = error => ({
     error
 });
 
-export const sendAnswer = (userAnswer) => dispatch => {
+export const sendAnswer = (answer) => dispatch => {
     dispatch(wordsRequest());
     return (
         fetch(`${API_BASE_URL}/words`, {
@@ -29,7 +29,7 @@ export const sendAnswer = (userAnswer) => dispatch => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                userAnswer
+                answer
             })
         })
             // Reject any requests which don't return a 200 status, creating

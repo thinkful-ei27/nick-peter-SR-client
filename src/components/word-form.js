@@ -1,10 +1,13 @@
 import React from 'react';
 import {Field, reduxForm, focus} from 'redux-form';
 import Input from './input';
+import { sendAnswer } from '../actions/words'
 
 export class WordForm extends React.Component {
     onSubmit(value) {
-        console.log(value)
+        const { userAnswer } = value
+        const { dispatch } = this.props
+        return dispatch(sendAnswer(userAnswer))
     }
 
     render() {
