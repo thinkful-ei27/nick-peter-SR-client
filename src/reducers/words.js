@@ -11,17 +11,20 @@ export default function reducer (state = initialState, action) {
   if (action.type === WORDS_REQUEST) {
     return Object.assign({}, state, {
       loading: true,
-      error: null
+      error: null,
+      answer: null
     });
   } else if (action.type === WORDS_SUCCESS) {
     return Object.assign({}, state, {
       word: action.word,
-      loading: false
+      loading: false,
+      error: null
     });
   } else if (action.type === WORDS_ANSWER_SUCCESS) {
     return Object.assign({}, state, {
       answer: action.answer,
-      loading: false
+      loading: false,
+      error: null
     });
   }
    else if (action.type === WORDS_ERROR) {

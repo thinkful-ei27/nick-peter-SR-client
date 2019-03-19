@@ -26,13 +26,17 @@ export const wordsError = error => ({
     error
 });
 
-export const getWord = () => dispatch => {
+export const getWord = () => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+
+  
   dispatch(wordsRequest());
   return (
     fetch(`${API_BASE_URL}/words`, {
       method: 'GET',
       headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authToken}`
       }
   })
       // Reject any requests which don't return a 200 status, creating
@@ -52,13 +56,16 @@ export const getWord = () => dispatch => {
   );
 }
 
-export const sendAnswer = (answer) => dispatch => {
+export const sendAnswer = (answer) => (dispatch, getState) => {
+    const authToken = getState().auth.authToken;
+    console.log(getState)
     dispatch(wordsRequest());
     return (
         fetch(`${API_BASE_URL}/words`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authToken}`
             },
             body: JSON.stringify({
                 answer
