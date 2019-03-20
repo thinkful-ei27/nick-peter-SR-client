@@ -17,14 +17,14 @@ export class WordForm extends React.Component {
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
-                <label htmlFor="userAnswer">Your Answer:</label>
+                <label className="input-label" htmlFor="userAnswer">Your Answer:</label>
                 <Field
                     component={Input}
                     type="text"
                     name="userAnswer"
                 />
                 <button 
-                    className="submitWord"
+                    className="submit-word"
                     type="submit"
                     disabled={this.props.pristine || this.props.submitting}>
                     Check My Answer
