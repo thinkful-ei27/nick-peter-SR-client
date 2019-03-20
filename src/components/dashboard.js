@@ -12,7 +12,7 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-        const { answer, username, word } = this.props;
+        const { answer, username, word, dispatch } = this.props;
 
         let feedback;
         if (answer) {
@@ -20,7 +20,7 @@ export class Dashboard extends React.Component {
         }
         let nextButton;
         if(this.props.next){
-          nextButton = <button className = "next-button">Next</button>
+          nextButton = <button onClick={() => dispatch(getWord())} className="next-button">Next</button>
         }
         return (
             <div className="dashboard">
