@@ -18,7 +18,10 @@ export class Dashboard extends React.Component {
         if (answer) {
             feedback = <p>{answer}</p>
         }
-
+        let nextButton;
+        if(this.props.next){
+          nextButton = <button className = "next-button">Next</button>
+        }
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
@@ -28,6 +31,7 @@ export class Dashboard extends React.Component {
                     <WordDisplay word={word}/>
                     <WordForm />
                     {feedback}
+                    {nextButton}
                 </div>
             </div>
         );
@@ -39,7 +43,8 @@ const mapStateToProps = state => {
     return {
         username: currentUser.username,
         word: state.words.word,
-        answer: state.words.answer
+        answer: state.words.answer,
+        next: state.words.next
     };
 };
 

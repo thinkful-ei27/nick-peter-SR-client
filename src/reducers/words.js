@@ -4,7 +4,8 @@ const initialState = {
   word: null,
   answer: null,
   error: null,
-  loading: false
+  loading: false,
+  next: false
 };
 
 export default function reducer (state = initialState, action) {
@@ -12,19 +13,22 @@ export default function reducer (state = initialState, action) {
     return Object.assign({}, state, {
       loading: true,
       error: null,
-      answer: null
+      answer: null,
+      next: false
     });
   } else if (action.type === WORDS_SUCCESS) {
     return Object.assign({}, state, {
       word: action.word,
       loading: false,
-      error: null
+      error: null,
+      next: false
     });
   } else if (action.type === WORDS_ANSWER_SUCCESS) {
     return Object.assign({}, state, {
       answer: action.answer,
       loading: false,
-      error: null
+      error: null,
+      next: true
     });
   }
    else if (action.type === WORDS_ERROR) {
