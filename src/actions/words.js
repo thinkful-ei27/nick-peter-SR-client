@@ -58,7 +58,6 @@ export const getWord = () => (dispatch, getState) => {
 
 export const sendAnswer = (answer) => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    console.log(getState)
     dispatch(wordsRequest());
     return (
         fetch(`${API_BASE_URL}/words`, {
