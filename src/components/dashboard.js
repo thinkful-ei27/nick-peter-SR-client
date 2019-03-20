@@ -12,15 +12,22 @@ export class Dashboard extends React.Component {
     }
 
     render() {
+        const { answer, username, word } = this.props;
+
+        let feedback;
+        if (answer) {
+            feedback = <p>{answer}</p>
+        }
+
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
-                    <h2>Ola {this.props.username}!</h2>
+                    <h2>Ola {username}!</h2>
                 </div>
                 <div className="learn-words-container">
-                    <WordDisplay word={this.props.word}/>
+                    <WordDisplay word={word}/>
                     <WordForm />
-                    {this.props.answer && <p>this.props.answer</p>}
+                    {feedback}
                 </div>
             </div>
         );
@@ -30,8 +37,7 @@ export class Dashboard extends React.Component {
 const mapStateToProps = state => {
     const {currentUser} = state.auth;
     return {
-        username: state.auth.currentUser.username,
-        name: `${currentUser.firstName} ${currentUser.lastName}`,
+        username: currentUser.username,
         word: state.words.word,
         answer: state.words.answer
     };
