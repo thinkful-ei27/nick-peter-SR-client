@@ -4,7 +4,7 @@ function WordDisplay (props) {
   return (
     <div className="word-container">
       <label htmlFor="wordDisplay">Portuguese Word to Learn:</label>
-      <p className="word-display" name="wordDisplay">Nome {/* props.word */}</p>
+      <p className="word-display" name="wordDisplay">{props.word}</p>
     </div>
   )
 }
