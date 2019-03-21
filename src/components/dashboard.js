@@ -4,6 +4,7 @@ import requiresLogin from './requires-login';
 import WordDisplay from './word-display';
 import { getWord } from '../actions/words'; 
 import WordForm from './word-form';
+import Progress from './progress';
 import {Link, Redirect} from 'react-router-dom';
 import './dashboard.css';
 export class Dashboard extends React.Component {
@@ -12,7 +13,7 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-        const { answer, username, word, dispatch } = this.props;
+        const { answer, username, word, dispatch, progress, progressData } = this.props;
 
         let feedback;
         if (answer) {
@@ -29,6 +30,7 @@ export class Dashboard extends React.Component {
                 </div>
                 <div className="learn-words-container">
                     <WordDisplay word={word}/>
+                    <Progress />
                     <WordForm />
                     {feedback}
                     {nextButton}
@@ -44,7 +46,7 @@ const mapStateToProps = state => {
         username: currentUser.username,
         word: state.words.word,
         answer: state.words.answer,
-        next: state.words.next
+        next: state.words.next,
     };
 };
 
