@@ -12,21 +12,15 @@ export class Progress extends React.Component{
 
     render(){
     
-        const progressList = 
-        Object.keys(this.props.progressData).map((key) => {
-        let display = this.props.progressData[key];
-        return (
-        <li key={key}>{key}: {display}</li>
-        )
-        });
-
+    
+    const progressGuesses = <p>You've seen {this.props.progressData.currWord} {this.props.progressData.totalTimesGuessed} time{this.props.progressData.totalTimesGuessed === 1 ? '' : 's'}</p>;
+    const progressCorrect = <p>You've gotten it correct {Math.trunc(this.props.progressData.percentCorrect)}% of the time</p> 
     if(this.props.progress){
     return (
         <div className='progressContainer'>
           <button onClick={() => this.handleClick()} className='progressButton'>Check Progress</button>
-          <ul>
-            {progressList}
-          </ul>
+          {progressGuesses}
+          {progressCorrect}
         </div>
     )} else {
         return (
