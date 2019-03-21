@@ -13,15 +13,11 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-        const { answer, username, word, dispatch, progress, progressData } = this.props;
+        const { answer, username, word, next } = this.props;
 
         let feedback;
         if (answer) {
             feedback = <p>{answer}</p>
-        }
-        let nextButton;
-        if(this.props.next){
-          nextButton = <button onClick={() => dispatch(getWord())} className="next-button">Next</button>
         }
         return (
             <div className="dashboard">
@@ -31,9 +27,8 @@ export class Dashboard extends React.Component {
                 <div className="learn-words-container">
                     <WordDisplay word={word}/>
                     <Progress />
-                    <WordForm />
+                    <WordForm next={next}/>
                     {feedback}
-                    {nextButton}
                 </div>
             </div>
         );
@@ -46,7 +41,7 @@ const mapStateToProps = state => {
         username: currentUser.username,
         word: state.words.word,
         answer: state.words.answer,
-        next: state.words.next,
+        next: state.words.next
     };
 };
 
