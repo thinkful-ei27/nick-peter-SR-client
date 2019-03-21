@@ -27,6 +27,16 @@ export const authSuccess = currentUser => ({
     currentUser
 });
 
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export const logoutSuccess = () => ({
+    type: LOGOUT_SUCCESS,
+});
+
+export const LOGOUT_BOOL_FALSE = 'LOGOUT_BOOL_FALSE';
+export const logoutBoolFalse = () => ({
+    type: LOGOUT_BOOL_FALSE,
+});
+
 export const AUTH_ERROR = 'AUTH_ERROR';
 export const authError = error => ({
     type: AUTH_ERROR,

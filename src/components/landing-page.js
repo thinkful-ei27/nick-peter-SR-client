@@ -1,18 +1,25 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
-
+import {logoutBoolFalse} from '../actions/auth';
 import LoginForm from './login-form';
 import './landing-page.css';
 
-export function LandingPage(props) {
+export class LandingPage extends React.Component {
+    
+  
+  detectClick() {
+    this.props.dispatch(logoutBoolFalse())
+  }
+  
+  render() {
     // If we are logged in redirect straight to the user's dashboard
-    if (props.loggedIn) {
-        return <Redirect to="/dashboard" />;
-    }
+      if (this.props.loggedIn) {
+          return <Redirect to="/dashboard" />;
+      }
 
     return (
-      <div role="container" className="homeContainer">
+      <div onClick={() => this.detectClick()} role="container" className="homeContainer">
         <div className="home">
             <LoginForm />
             <p>For New Users:</p>
@@ -29,6 +36,7 @@ export function LandingPage(props) {
         </div>
       </div>
     );
+  }
 }
 
 const mapStateToProps = state => ({

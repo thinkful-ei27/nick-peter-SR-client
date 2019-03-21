@@ -3,6 +3,8 @@ import {
     CLEAR_AUTH,
     AUTH_REQUEST,
     AUTH_SUCCESS,
+    LOGOUT_SUCCESS,
+    LOGOUT_BOOL_FALSE,
     AUTH_ERROR
 } from '../actions/auth';
 
@@ -10,7 +12,8 @@ const initialState = {
     authToken: null, // authToken !== null does not mean it has been validated
     currentUser: null,
     loading: false,
-    error: null
+    error: null,
+    didLogout: false
 };
 
 export default function reducer(state = initialState, action) {
@@ -32,6 +35,15 @@ export default function reducer(state = initialState, action) {
         return Object.assign({}, state, {
             loading: false,
             currentUser: action.currentUser
+        });
+    } else if (action.type === LOGOUT_SUCCESS) {
+        return Object.assign({}, state, {
+            loading: false,
+            didLogout: true
+        });
+    } else if (action.type === LOGOUT_BOOL_FALSE) {
+        return Object.assign({}, state, {
+            didLogout: false
         });
     } else if (action.type === AUTH_ERROR) {
         return Object.assign({}, state, {
