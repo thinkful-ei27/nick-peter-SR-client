@@ -22,10 +22,8 @@ export class LandingPage extends React.Component {
       <div onClick={() => this.detectClick()} role="main" className="homeContainer">
         <div className="home">
             <LoginForm role="form"/>
-            <p>For New Users:</p>
-            <Link to="/register">Register</Link>
-            <label>For Confused Users:</label>
-            <button className="faqButton">FAQ</button>
+            <p>New Users:</p>
+            <Link className='linkToRegister' to="/register">Register</Link>
         </div>
         <div className="informercial">
           <h2>Learn Portuguese the RIGHT Way</h2>

@@ -25,7 +25,7 @@ export class LoginForm extends React.Component {
                     this.onSubmit(values)
                 )}>
                 {error}
-                <p>For Returning Users:</p>
+                <p>Returning Users:</p>
                 <fieldset>
                     <Field
                         component={Input}
