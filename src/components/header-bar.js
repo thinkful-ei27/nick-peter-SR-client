@@ -24,9 +24,7 @@ export class HeaderBar extends React.Component {
 
         if (this.props.didLogout) {
             logOutSuccess = (
-                <div role="alert" className="logout-success">
                     <p>Successfully logged out!</p>
-                </div>
             )
         }
 
