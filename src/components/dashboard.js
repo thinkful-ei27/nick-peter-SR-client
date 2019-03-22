@@ -20,7 +20,7 @@ export class Dashboard extends React.Component {
             feedback = <p>{answer}</p>
         }
         return (
-            <div className="dashboard">
+            <div role="main" className="dashboard">
                 <div className="dashboard-username">
                     <h2>Ola {username}!</h2>
                 </div>

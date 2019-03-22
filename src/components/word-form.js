@@ -44,14 +44,17 @@ export class WordForm extends React.Component {
                   onSubmit={this.props.handleSubmit(values =>
                       this.onSubmit(values)
                   )}>
-                  <label className="input-label" htmlFor="userAnswer">Your Answer:</label>
-                  <Field
-                      validate={[this.required]}
-                      component={Input}
-                      type="text"
-                      name="userAnswer"
-                  />
-                {submitButton}
+                  <fieldset>
+                    <Field
+                        validate={[this.required]}
+                        component={Input}
+                        label="Your Answer:"
+                        htmlFor="userAnswer"
+                        type="text"
+                        name="userAnswer"
+                    />
+                    {submitButton}
+                  </fieldset>
               </form>
               {nextButton}
             </div>

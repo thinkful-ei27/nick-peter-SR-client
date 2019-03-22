@@ -29,18 +29,31 @@ label {
   width: 200px;
   font-size: 16px;
   border-radius: 5px;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+#passwordConfirm {
+  height: 35px;
+  width: 200px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 8px;
 }
 
 #username {
   height: 35px;
   width: 200px;
   font-size: 16px;
+  border: 1px solid black;
   border-radius: 5px;
+  padding: 8px;
 }
 
 .login-button{
   height: 35px;
-  width: 75px;
+  width: 200px;
   font-size: 16px;
   border-radius: 5px;
   margin-top: 5px;

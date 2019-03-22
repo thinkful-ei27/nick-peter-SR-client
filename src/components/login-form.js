@@ -26,22 +26,26 @@ export class LoginForm extends React.Component {
                 )}>
                 {error}
                 <p>For Returning Users:</p>
-                <label htmlFor="username">Username</label>
-                <Field
-                    component={Input}
-                    type="text"
-                    name="username"
-                    id="username"
-                    validate={[required, nonEmpty]}
-                />
-                <label htmlFor="password">Password</label>
-                <Field
-                    component={Input}
-                    type="password"
-                    name="password"
-                    id="password"
-                    validate={[required, nonEmpty]}
-                />
+                <fieldset>
+                    <Field
+                        component={Input}
+                        htmlFor="username"
+                        label="Username"
+                        type="text"
+                        name="username"
+                        id="username"
+                        validate={[required, nonEmpty]}
+                    />
+                    <Field
+                        component={Input}
+                        htmlFor="password"
+                        label="Password"
+                        type="password"
+                        name="password"
+                        id="password"
+                        validate={[required, nonEmpty]}
+                    />
+                </fieldset>
                 <button className="login-button" disabled={this.props.pristine || this.props.submitting}>
                     Log in
                 </button>

@@ -19,16 +19,16 @@ export class LandingPage extends React.Component {
       }
 
     return (
-      <div onClick={() => this.detectClick()} role="container" className="homeContainer">
+      <div onClick={() => this.detectClick()} role="main" className="homeContainer">
         <div className="home">
-            <LoginForm />
+            <LoginForm role="form"/>
             <p>For New Users:</p>
             <Link to="/register">Register</Link>
             <label>For Confused Users:</label>
             <button className="faqButton">FAQ</button>
         </div>
-        <div role="container" className="informercial">
-          <h3>Learn Portuguese the RIGHT Way</h3>
+        <div className="informercial">
+          <h2>Learn Portuguese the RIGHT Way</h2>
           <p>Portugueuse Palavras uses Spaced Reptition,</p>
           <p>focusing on what you don't know and not wasting</p>
           <p>time with what you do. Click on the Register link</p>
