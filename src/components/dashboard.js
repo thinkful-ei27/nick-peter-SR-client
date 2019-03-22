@@ -22,7 +22,7 @@ export class Dashboard extends React.Component {
         return (
             <div role="main" className="dashboard">
                 <div className="dashboard-username">
-                    <h2>Ola {username}!</h2>
+                    <h2>Olá, {username}!</h2>
                 </div>
                 <div className="learn-words-container">
                     <WordDisplay word={word}/>
