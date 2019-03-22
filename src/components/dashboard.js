@@ -26,7 +26,7 @@ export class Dashboard extends React.Component {
                 </div>
                 <div className="learn-words-container">
                     <WordDisplay word={word}/>
-                    <Progress />
+                    <Progress next={next}/>
                     <WordForm next={next}/>
                     {feedback}
                 </div>
