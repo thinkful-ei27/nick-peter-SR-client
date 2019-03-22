@@ -14,8 +14,11 @@
   border: solid 1px black;
   border-radius: 5px;
   background-color: white;
-  display: inline-block;
+  display: block;
   padding: 5px;
+  width: 360px;
+  margin-right: auto;
+  margin-left: auto;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
