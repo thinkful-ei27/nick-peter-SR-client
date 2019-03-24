@@ -40,6 +40,10 @@
     border-radius: 5px;
 }
 
+.hidden {
+    display: hidden;
+}
+
 #userAnswer {
     width: 150px;
     height: 32px;
