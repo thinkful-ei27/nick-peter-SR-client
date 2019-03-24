@@ -6,7 +6,7 @@
   width: 100%;
   box-sizing: border-box;
   border: 2px solid black;
-  background: url('http://www.kcl.ac.uk/newimages/sspp/Brazil-Flag-Main.jpg') left top no-repeat, url('https://ak5.picdn.net/shutterstock/videos/2623775/thumb/1.jpg') right bottom no-repeat;
+  background: url('https://www.kcl.ac.uk/newimages/sspp/Brazil-Flag-Main.jpg') left top no-repeat, url('https://ak5.picdn.net/shutterstock/videos/2623775/thumb/1.jpg') right bottom no-repeat;
   background-size: 50%, 50%;
 }
 
@@ -21,7 +21,6 @@
   margin-left: auto;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
-
 
 p {
   background-color: white;
