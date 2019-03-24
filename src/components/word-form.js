@@ -43,7 +43,6 @@ export class WordForm extends React.Component {
 
        
 
-
         return (
             <div>
               <form
