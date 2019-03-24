@@ -5,7 +5,6 @@ import WordDisplay from './word-display';
 import { getWord } from '../actions/words'; 
 import WordForm from './word-form';
 import Progress from './progress';
-import {Link, Redirect} from 'react-router-dom';
 import './dashboard.css';
 export class Dashboard extends React.Component {
     componentDidMount() {
