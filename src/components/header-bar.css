@@ -14,12 +14,23 @@
   border: solid 1px black;
   border-radius: 5px;
   background-color: white;
-  display: inline-block;
+  display: block;
   padding: 5px;
+  width: 360px;
+  margin-right: auto;
+  margin-left: auto;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 
+p {
+  background-color: white;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 2px;
+}
 
 .logout-button{
   height: 35px;
@@ -29,7 +40,7 @@
   margin-bottom: 5px;
 }
 
-@media only screen and (max-width: 333px){
+@media only screen and (max-width: 470px){
   .header-bar{
     background: url('http://www.kcl.ac.uk/newimages/sspp/Brazil-Flag-Main.jpg') left no-repeat, url('https://ak5.picdn.net/shutterstock/videos/2623775/thumb/1.jpg') right no-repeat;
     background-size: cover, cover;
