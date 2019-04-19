@@ -21,6 +21,7 @@ export class RegistrationForm extends React.Component {
     render() {
         return (
             <form
+                autoComplete="off"
                 className="login-form"
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)

@@ -4,15 +4,22 @@ import Input from './input';
 import { sendAnswer, getWord } from '../actions/words'
 
 export class WordForm extends React.Component {
+
+    state = {
+        userAnswer: ''
+    }    
+
     onSubmit(value) {
-        const { userAnswer } = value
-        const { dispatch } = this.props
+        const { userAnswer } = value;
+        const { dispatch } = this.props;
+        this.setState({ userAnswer });
         return dispatch(sendAnswer(userAnswer)).then(() => dispatch(reset('word-form')))
     }
 
     onClick(e) {
         e.preventDefault();
         const { dispatch } = this.props;
+        this.setState({ userAnswer: ''});
         return dispatch(getWord());
     }
 
@@ -36,7 +43,6 @@ export class WordForm extends React.Component {
 
        
 
-
         return (
             <div>
               <form
@@ -48,9 +54,9 @@ export class WordForm extends React.Component {
                     <Field
                         validate={[this.required]}
                         component={Input}
-                        label="Your Answer:"
+                        label={this.state.userAnswer ? `Your Answer: ${this.state.userAnswer}` : 'Your Answer:'}
                         htmlFor="userAnswer"
-                        type="text"
+                        type={this.props.next ? 'hidden' : 'text'}
                         name="userAnswer"
                     />
                     {submitButton}
