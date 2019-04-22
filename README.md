@@ -2,7 +2,10 @@ Portuguese Palavras is a mobile first web application designed to make learning 
 
 This app was created by Peter Ramos and Nick (Nicholas) Justin.
 
-Link to Live App:https://clever-kowalevski-9d3301.netlify.com/
+Link to Live App:https://portuguesepalavras.com
+
+Demo Username: honestAbe
+Demo Password: password123
 
 Tech Stack:
 FrontEnd: React, Redux, Redux-Form, and React-Router
