@@ -4,7 +4,8 @@ This app was created by Peter Ramos and Nick (Nicholas) Justin.
 
 Link to Live App:https://portuguesepalavras.com
 
-Demo Username: honestAbe
+Demo Username: honestAbe  
+
 Demo Password: password123
 
 Tech Stack:
