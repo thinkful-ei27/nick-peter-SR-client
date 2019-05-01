@@ -19,17 +19,17 @@ export class Dashboard extends React.Component {
             feedback = <p>{answer}</p>
         }
         return (
-            <div role="main" className="dashboard">
-                <div className="dashboard-username">
+            <main className="dashboard">
+                <section className="dashboard-username">
                     <h2>Olá, {username}!</h2>
-                </div>
-                <div className="learn-words-container">
+                </section>
+                <section className="learn-words-container">
                     <WordDisplay word={word}/>
                     <Progress next={next}/>
                     <WordForm next={next}/>
                     {feedback}
-                </div>
-            </div>
+                </section>
+            </main>
         );
     }
 }

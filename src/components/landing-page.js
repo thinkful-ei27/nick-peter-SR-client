@@ -19,13 +19,13 @@ export class LandingPage extends React.Component {
       }
 
     return (
-      <div onClick={() => this.detectClick()} role="main" className="homeContainer">
-        <div className="home">
+      <main onClick={() => this.detectClick()} className="homeContainer">
+        <section className="home">
             <LoginForm role="form"/>
             <p>New Users:</p>
             <Link className='linkToRegister' to="/register">Register</Link>
-        </div>
-        <div className="informercial">
+        </section>
+        <section className="informercial">
           <h2>Learn Portuguese the RIGHT Way</h2>
           <p className="blurb">
             <strong>Portuguese Palavras</strong> is a web app for <strong>ANYONE</strong> who wants to learn the Portuguese language. 
@@ -33,8 +33,8 @@ export class LandingPage extends React.Component {
             the words through a <strong>spaced repetition algorithm</strong> to ensure you see words you don't know more
             and words you do less. Click on the <strong>Register Link</strong> to learn South America's most popular language today!
           </p>
-        </div>
-      </div>
+        </section>
+      </main>
     );
   }
 }

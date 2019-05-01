@@ -44,7 +44,6 @@ export class WordForm extends React.Component {
        
 
         return (
-            <div>
               <form
                   className="word-form"
                   onSubmit={this.props.handleSubmit(values =>
@@ -61,9 +60,8 @@ export class WordForm extends React.Component {
                     />
                     {submitButton}
                   </fieldset>
+                  {nextButton}
               </form>
-              {nextButton}
-            </div>
         );
     }
 }

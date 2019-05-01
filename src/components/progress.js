@@ -22,16 +22,16 @@ export class Progress extends React.Component{
     const progressCorrect = <p>You've gotten it correct {Math.trunc(this.props.progressData.percentCorrect)}% of the time</p> 
     if(this.props.progress){
     return (
-        <div className='progressContainer'>
+        <section className='progressContainer'>
           {button}
           {progressGuesses}
           {progressCorrect}
-        </div>
+        </section>
     )} else {
         return (
-          <div className='progressContainer'>
+          <section className='progressContainer'>
            {button}
-          </div>
+          </section>
         )
     }
     }
