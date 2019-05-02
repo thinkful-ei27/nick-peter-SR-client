@@ -19,7 +19,7 @@
 }
 
 .word-display {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .input-label {
@@ -27,15 +27,15 @@
 }
 
 .submit-word {
-    height: 35px;
-    width: 150px;
+    height: 40px;
+    width: 200px;
     font-size: 16px;
     border-radius: 5px;
 }
 
 .next-button {
-    height: 35px;
-    width: 150px;
+    height: 40px;
+    width: 200px;
     font-size: 16px;
     border-radius: 5px;
 }
@@ -45,8 +45,8 @@
 }
 
 #userAnswer {
-    width: 150px;
-    height: 32px;
+    width: 200px;
+    height: 40px;
     font-size: 16px;
     border-radius: 5px;
     padding: 2px 8px;
